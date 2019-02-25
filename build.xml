@@ -1,9 +1,14 @@
 <?xml version = "1.0"?>
 <project name = "Jenkins1" default = "run">
-   <target name = "compile" includeantruntime="false">
-      <javac srcdir = "./"  destdir="./">
+   <target name = "compile">
+      <javac  includeantruntime="false" srcdir = "." destdir ="."/>
    </target>
 
-   <target name = "run" depends="compile" fork="yes">
+   <target name = "run" depends="compile" >
+     <java classname="Main">
+     	<classpath path="."/>
+     	<arg value="1"/>
+        <arg value="2"/>
+     </java>
    </target>
 </project>
