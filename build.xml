@@ -5,10 +5,5 @@
    </target>
 
    <target name = "run" depends="compile" fork="yes">
-     <java classname="Main">
-     	<classpath path="."/>
-     	<arg value="1"/>
-        <arg value="2"/>
-     </java>
    </target>
 </project>
